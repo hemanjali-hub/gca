@@ -1,0 +1,30 @@
+{
+  "name": "assessment-pw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+  "test:headed": "npx playwright test --headed",
+  "test:report": "npx playwright show-report",
+  "test:ui": "npx playwright test --ui",
+  "test:smoke": "npx playwright test --grep \"@smoke\"",
+  "test:sanity": "npx playwright test --grep \"@sanity\"",
+  "test:regression": "npx playwright test --grep \"@regression\"",
+  "test:uat:smoke": "npx cross-env ENV=uat playwright test --grep \"@smoke\"",
+  "test:uat:sanity": "npx cross-env ENV=uat playwright test --grep \"@sanity\"",
+  "test:stage:regression": "npx cross-env ENV=stage playwright test --grep \"@regression\"",
+  "test:test:dashboard": "npx cross-env ENV=test playwright test --grep \"@dashboard\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.7.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.6.1",
+    "typescript": "^6.0.3"
+  }
+}
